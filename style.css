@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(#009688 0%, #009688 130px, #d6dbd5 130px, #d6dbd5 100%);
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+    height: calc(100vh - 40px);
+    background-color:#f3eeea;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8);
+}
