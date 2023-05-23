@@ -26,6 +26,7 @@
 
 .left-header{
     height: 60px;
+    padding: 20px;
     background-color: #eaeaea;
     border-right: 1px  solid white;
     display: flex;
@@ -33,16 +34,34 @@
     justify-content: space-between;
 }
 
+.icon{
+    display: flex;
+    gap: 20px;
+    color: #b1b1b1;
+}
+
+.icon li{
+    list-style-type: none;
+}
+
 .avatar{
-    height: 50px;
-    width: 50px;
-    background-color: red;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.avatar .nome{
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.avatar p{
+    color: #a9a7ab;
+    font-size: 12px;
 }
 
 .avatar img{
-    width: 100%;
-    height: 100%;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
 }
 
@@ -68,7 +87,11 @@
 
 .right-header{
     height: 60px;
+    padding: 20px;
     background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
 }
 
 .right-main{
