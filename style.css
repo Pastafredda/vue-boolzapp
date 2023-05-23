@@ -22,19 +22,33 @@
 .left-side{
     width: 36%;
     height: 100%;
-    background-color: red;
 }
 
 .left-header{
     height: 60px;
-    background-color: black;
+    background-color: #eaeaea;
     border-right: 1px  solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.avatar{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .notifiche{
     height: 80px;
-    background-color: aquamarine;
+    background-color: #8edafc;
 }
 
 .search{
@@ -54,15 +68,15 @@
 
 .right-header{
     height: 60px;
-    background-color: black;
+    background-color: #eaeaea;
 }
 
 .right-main{
     height: calc(100% - 120px);
-    background-color: green;
+    background-color: lightgray;
 }
 
 .right-footer{
     height: 60px;
-    background-color: gray;
+    background-color: #f3eeea;
 }
