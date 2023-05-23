@@ -38,6 +38,7 @@
     display: flex;
     gap: 20px;
     color: #b1b1b1;
+    font-size: 20px;
 }
 
 .icon li{
@@ -68,15 +69,57 @@
 .notifiche{
     height: 80px;
     background-color: #8edafc;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.nome-info{
+    margin-left: 10px;
+}
+
+.nome-info p{
+    text-decoration: underline;
+}
+
+.bell{
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   background-color: #f1fafe;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.bell i{
+    color: #8dd8fb;
 }
 
 .search{
     height: 40px;
-    background-color: gray;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.search button{
+    width: 70px;
+    padding: 5px;
+    background-color: white;
+    color: #a9a7ab;
+    border: none;
+    cursor: pointer;
 }
 
 .search input{
-    width: 90%;
+    width: 100%;
+    padding: 5px;
+    background-color: white;
+    color: #a9a7ab;
+    border: none;
 }
 
 .right-side{
