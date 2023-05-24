@@ -72,7 +72,7 @@
                         </ul>
                     </div>
                     <div class="right-main">
-                        <div class="row-inviato" v-for="(contact,index) in contacts" :class="contact.status = send ? '' : '' ">
+                        <div class="row-inviato" v-for="(contact,index) in contacts" :class="messages.status === 'sent' ? 'messages-sent' : 'messages-received'">
                             <div class="box">
                                 <p></p>
                                 <span>15:30</span>
