@@ -166,6 +166,7 @@
 
 .orario{
     color: #a9a7ab;
+    font-size: 12px;
 }
 
 /* Lato destro dell'app */
@@ -193,4 +194,20 @@
 .right-footer{
     height: 60px;
     background-color: #f3eeea;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.right-footer input{
+    width: 80%;
+    padding: 12px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.right-footer span{
+    font-size: 20px;
+    color: #6b7376;
 }
