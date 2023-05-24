@@ -72,14 +72,14 @@
                         </ul>
                     </div>
                     <div class="right-main">
-                        <div class="row-inviato">
-                            <div class="inviato box">
-                                <p>si</p>
+                        <div class="row-inviato" v-for="(contact,index) in contacts" :class="contact.status = send ? '' : '' ">
+                            <div class="box">
+                                <p></p>
                                 <span>15:30</span>
                             </div>
                         </div>
                         <div class="row-ricevuto">
-                            <div class="ricevuto box">
+                            <div class="box">
                                 <p>Hai portato a spasso il cane</p>
                                 <span>15:30</span>
                             </div>

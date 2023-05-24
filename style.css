@@ -189,6 +189,8 @@
     height: calc(100% - 120px);
     background-color: lightgray;
     overflow: auto;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
 .row-inviato{
@@ -222,12 +224,12 @@
     float: right;
 }
 
-.inviato{
+.row-inviato .box{
     background-color: #d5f9ba;
     margin-right: 60px;
 }
 
-.ricevuto{
+.row-ricevuto .box{
     background-color: white;
     margin-left: 60px;
 }
