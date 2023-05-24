@@ -41,7 +41,7 @@
     display: flex;
     gap: 20px;
     color: #b1b1b1;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .icon li{
@@ -64,8 +64,8 @@
 }
 
 .avatar img{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
 
@@ -110,7 +110,7 @@
 
 .search button{
     width: 70px;
-    padding: 5px;
+    padding: 6px;
     background-color: white;
     color: #a9a7ab;
     border: none;
@@ -119,9 +119,8 @@
 
 .search input{
     width: 100%;
-    padding: 5px;
+    padding: 6px;
     background-color: white;
-    color: #a9a7ab;
     border: none;
 }
 
@@ -146,8 +145,8 @@
 }
 
 .avatar-messaggi img{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
 }
 
@@ -189,6 +188,48 @@
 .right-main{
     height: calc(100% - 120px);
     background-color: lightgray;
+    overflow: auto;
+}
+
+.row-inviato{
+    display: flex;
+    justify-content: end;
+}
+
+.row-ricevuto{
+    display: flex;
+    justify-content: start;
+}
+
+.box{
+    min-width: 80px;
+    max-width: 360px;
+    border-radius: 6px;
+    
+    justify-content: start;
+    margin-top: 20px;
+}
+
+.box p{
+    max-width: 78%;
+    padding: 8px 14px;
+}
+
+.box span{
+    font-size: 12px;
+    padding: 0 4px 4px 0;
+    color: #6b7376;
+    float: right;
+}
+
+.inviato{
+    background-color: #d5f9ba;
+    margin-right: 60px;
+}
+
+.ricevuto{
+    background-color: white;
+    margin-left: 60px;
 }
 
 .right-footer{
