@@ -168,6 +168,11 @@ createApp({
                 }
             ]            
         }
+    },
+    methods:{
+        newChat(indice){
+            this.activeContact=indice;
+        }
     }
 
 }).mount("#app")

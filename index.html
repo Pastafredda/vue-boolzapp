@@ -41,7 +41,7 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="messaggi">
-                       <div class="container-messaggi" v-for="contact in contacts">
+                       <div class="container-messaggi" v-for="(contact,index) in contacts" @click="newChat(index)">
                             <div class="avatar-messaggi">
                                 <img :src= contact.avatar alt="image">
                                 <div class="nome-messaggi">
@@ -58,10 +58,10 @@
                 </div>
                 <div class="right-side">
                     <div class="right-header">
-                        <div class="avatar">
-                            <img src="img/02.webp" alt="avatar">
+                        <div class="avatar" @click="newChat(index)">
+                            <img :src= contacts[activeContact].avatar alt="avatar">
                             <div class="nome">
-                                <span>Michele</span>
+                                <span>{{contacts[activeContact].name}}</span>
                                 <p>Ultimo accesso oggi alle 12:00</p>
                             </div>
                         </div>

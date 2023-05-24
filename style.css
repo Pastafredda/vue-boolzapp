@@ -137,6 +137,7 @@
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid #f3eeea;
+    cursor: pointer;
 }
 
 .avatar-messaggi{
@@ -207,13 +208,10 @@
     min-width: 80px;
     max-width: 360px;
     border-radius: 6px;
-    
-    justify-content: start;
     margin-top: 20px;
 }
 
 .box p{
-    max-width: 78%;
     padding: 8px 14px;
 }
 
