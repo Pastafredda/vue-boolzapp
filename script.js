@@ -4,7 +4,9 @@ createApp({
     data(){
         return{
             activeContact:0,
+            search:'',
             newMessage:'',
+            timer:0,
             contacts: [
                 {
                     name: 'Michele',
@@ -179,11 +181,19 @@ createApp({
                 const newItem ={
                     message: this.newMessage,
                     status: 'sent',
+                }
+                this.contacts[this.activeContact].messages.push(newItem);
+                this.newMessage = '';
             }
-            this.contacts[this.activeContact].messages.push(newItem);
-            this.newMessage = '';
+            const newItem2 ={
+                message: 'ok',
+                status: 'received',
+            }
+            this.contacts[this.activeContact].messages.push(newItem2);
            
-           }
+        },
+        searchValue(){
+        //    if()
         }
     }
 
