@@ -189,8 +189,9 @@ createApp({
                 message: 'ok',
                 status: 'received',
             }
+            setTimeout(() => {
             this.contacts[this.activeContact].messages.push(newItem2);
-           
+            }, 1000);
         },
         searchValue(){
         //    if()
