@@ -4,9 +4,8 @@ createApp({
     data(){
         return{
             activeContact:0,
-            search:'',
             newMessage:'',
-            timer:0,
+            search:'',
             contacts: [
                 {
                     name: 'Michele',
@@ -193,9 +192,15 @@ createApp({
             this.contacts[this.activeContact].messages.push(newItem2);
             }, 1000);
         },
-        searchValue(){
-        //    if()
-        }
-    }
 
+        searchContacts(){
+            this.contacts.forEach(element => {
+                if(!element.name.toLowerCase().includes(this.search.toLowerCase())){
+                    element.visible = false
+                }else{
+                    element.visible = true
+                }
+            });
+        },
+    }
 }).mount("#app")

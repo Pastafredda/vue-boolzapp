@@ -37,11 +37,11 @@
                         </div>
                     </div>
                     <div class="search">
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
+                        <button @click="searchContacts"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="search" placeholder="Cerca o inizia una nuova chat" v-model="search" @keyup="searchContacts">
                     </div>
                     <div class="messaggi">
-                       <div class="container-messaggi" v-for="(contact,index) in contacts" @click="newChat(index)" :class="activeContact === index ? 'opacity': '' ">
+                       <div class="container-messaggi" v-for="(contact,index) in contacts" @click="newChat(index)" :class="[(activeContact === index ? 'opacity': ''),(contact.visible === false ? 'none' : '')]">
                             <div class="avatar-messaggi">
                                 <img :src= contact.avatar alt="image">
                                 <div class="nome-messaggi">
@@ -81,7 +81,7 @@
                         <div class="row-ricevuto">
                            
                         </div>
-                        
+
                     </div>
                     <div class="right-footer">
                         <span><i class="fa-regular fa-face-smile"></i></span>
