@@ -4,6 +4,7 @@ createApp({
     data(){
         return{
             activeContact:0,
+            newMessage:'',
             contacts: [
                 {
                     name: 'Michele',
@@ -172,6 +173,12 @@ createApp({
     methods:{
         newChat(indice){
             this.activeContact=indice;
+        },
+        invia(){
+           const newItem ={
+            message: this.newMessage,
+           }
+           this.contacts.push(newItem);
         }
     }
 
