@@ -41,7 +41,7 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="messaggi">
-                       <div class="container-messaggi" v-for="(contact,index) in contacts" @click="newChat(index)">
+                       <div class="container-messaggi" v-for="(contact,index) in contacts" @click="newChat(index)" :class="activeContact === index ? 'opacity': '' ">
                             <div class="avatar-messaggi">
                                 <img :src= contact.avatar alt="image">
                                 <div class="nome-messaggi">
@@ -74,7 +74,7 @@
                     <div class="right-main">
                         <div class="row-inviato" v-for="message in contacts[activeContact].messages" :class="message.status === 'sent' ? 'row-inviato' : 'row-ricevuto'">
                             <div class="box">
-                                <p>{{message.message}} {{newMessage}}</p>
+                                <p>{{message.message}}</p>
                                 <span>15:30</span>
                             </div>
                         </div>

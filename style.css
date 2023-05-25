@@ -140,6 +140,10 @@
     cursor: pointer;
 }
 
+.opacity{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .avatar-messaggi{
     display: flex;
     align-items: center;

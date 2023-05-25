@@ -175,10 +175,15 @@ createApp({
             this.activeContact=indice;
         },
         invia(){
-           const newItem ={
-            message: this.newMessage,
+            if(this.newMessage !== ''){
+                const newItem ={
+                    message: this.newMessage,
+                    status: 'sent',
+            }
+            this.contacts[this.activeContact].messages.push(newItem);
+            this.newMessage = '';
+           
            }
-           this.contacts.push(newItem);
         }
     }
 
