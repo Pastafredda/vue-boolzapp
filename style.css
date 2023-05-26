@@ -64,8 +64,8 @@
 }
 
 .avatar img{
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
 }
 
@@ -150,13 +150,14 @@
 }
 
 .avatar-messaggi img{
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
 }
 
 .nome-messaggi{
-    margin-left: 10px;
+    margin-left: 18px;
+    align-self: flex-start;
 }
 
 .nome-messaggi span{
@@ -171,6 +172,7 @@
 .orario{
     color: #a9a7ab;
     font-size: 12px;
+    align-self: flex-start;
 }
 
 /* Lato destro dell'app */

@@ -3,13 +3,13 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
-            activeContact:0,
+            activeContact:0, 
             newMessage:'',
             search:'',
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: '/img/avatar_1.png',
+                    avatar: './img/avatar_1.png',
                     visible: true,
                     messages: [
                         {
