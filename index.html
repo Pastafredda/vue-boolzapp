@@ -72,8 +72,12 @@
                         </ul>
                     </div>
                     <div class="right-main">
-                        <div class="row-inviato" v-for="message in contacts[activeContact].messages" :class="message.status === 'sent' ? 'row-inviato' : 'row-ricevuto'">
+                        <div class="row-inviato" v-for="(message,index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'row-inviato' : 'row-ricevuto'">
                             <div class="box">
+                                <a href="#"><i class="fa-solid fa-angle-down"></i></a>
+                                <ul class="dropdown">
+                                    <li @click.stop="rimuovi(index)">Delete</li>
+                                </ul>
                                 <p>{{message.message}}</p>
                                 <span>{{message.date}}</span>
                             </div>

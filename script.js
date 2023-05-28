@@ -176,13 +176,18 @@ createApp({
         newChat(indice){
             this.activeContact=indice;
         },
+
+        rimuovi(indice){
+            this.contacts[this.activeContact].messages.splice(indice,1);
+        },
+
         invia(){
             if(this.newMessage !== ''){
                 this.dateNow();
                 const newItem ={
                     message: this.newMessage,
                     status: 'sent',
-                    date:this.nowData
+                    date:this.nowData.toLocaleString(luxon.DateTime.TIME_24_SIMPLE) 
                 }
                 this.contacts[this.activeContact].messages.push(newItem);
                 this.newMessage = '';
@@ -210,8 +215,8 @@ createApp({
         },
 
         dateNow(){
-            const d = luxon.DateTime.local();  
-            this.nowData = d.toFormat('T');
+            const dt = luxon.DateTime.local();  
+            this.nowData = dt.toFormat('T');
         }
         
         

@@ -215,6 +215,42 @@
     max-width: 360px;
     border-radius: 6px;
     margin-top: 20px;
+    position: relative;
+}
+
+.box:hover a{
+    display: block;
+}
+
+.box:hover ul{
+    display: block;
+}
+
+.box a{
+    float: right;
+    text-decoration: none;
+    color: black;
+    padding: 4px;
+    display: none;
+}
+
+.dropdown li{
+    list-style-type: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown{
+    position: absolute;
+    top: 22px;
+    right: -40px;
+    background-color:#00363e;
+    color: #00fb79;
+    width: 60px;
+    z-index: 999;
+    display: none;
+    
 }
 
 .box p{
