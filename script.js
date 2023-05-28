@@ -6,6 +6,7 @@ createApp({
             activeContact:0, 
             newMessage:'',
             search:'',
+            nowData:'',
             contacts: [
                 {
                     name: 'Michele',
@@ -177,19 +178,24 @@ createApp({
         },
         invia(){
             if(this.newMessage !== ''){
+                this.dateNow();
                 const newItem ={
                     message: this.newMessage,
                     status: 'sent',
+                    date:this.nowData
                 }
                 this.contacts[this.activeContact].messages.push(newItem);
                 this.newMessage = '';
+                
             }
             const newItem2 ={
                 message: 'ok',
                 status: 'received',
+                date:this.nowData.toLocaleString(luxon.DateTime.TIME_24_SIMPLE) 
             }
             setTimeout(() => {
-            this.contacts[this.activeContact].messages.push(newItem2);
+                this.dateNow(); 
+                this.contacts[this.activeContact].messages.push(newItem2);
             }, 1000);
         },
 
@@ -202,5 +208,13 @@ createApp({
                 }
             });
         },
+
+        dateNow(){
+            const d = luxon.DateTime.local();  
+            this.nowData = d.toFormat('T');
+        }
+        
+        
     }
 }).mount("#app")
+

@@ -75,7 +75,7 @@
                         <div class="row-inviato" v-for="message in contacts[activeContact].messages" :class="message.status === 'sent' ? 'row-inviato' : 'row-ricevuto'">
                             <div class="box">
                                 <p>{{message.message}}</p>
-                                <span>15:30</span>
+                                <span>{{message.date}}</span>
                             </div>
                         </div>
                         <div class="row-ricevuto">
@@ -92,8 +92,7 @@
             </div>
         </div>
     </div>
-    
-   
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>
 </body>
